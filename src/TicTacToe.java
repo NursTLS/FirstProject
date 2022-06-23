@@ -102,16 +102,19 @@ public class TicTacToe {
                 }
             }
         }
-
         return false;
     }
 
     private static boolean userWin(char[][] gameTable) {
-        return true;
+        return isWinner(gameTable, 'X');
     }
 
     private static boolean computerWin(char[][] gameTable) {
-        return true;
+        return isWinner(gameTable, '0');
+    }
+
+    private static boolean isWinner(char[][] gameTable, char ch) {
+        return false;
     }
 
     private static boolean isDraw(char[][] gameTable) {
