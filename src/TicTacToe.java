@@ -15,7 +15,7 @@ public class TicTacToe {
             System.out.println("Computer made a move.");
         }
 
-        while(true) {
+        while (true) {
             makeUserMove(gameTable);
             printGameTable(gameTable);
             if (userWin(gameTable)) {
@@ -49,10 +49,21 @@ public class TicTacToe {
         printGameTable(mappingTable);
     }
 
-    private static void makeComputerMove(char[][] gameTable) {
+    private static void printGameTable(char[][] gameTable) {
+        for (int i = 0; i < 3; ++i) {
+            System.out.println("-------------");
+
+            for (int j = 0; j < 3; ++j) {
+                System.out.print("| " + gameTable[i][j] + " ");
+            }
+
+            System.out.println("|");
+        }
+
+        System.out.println("-------------");
     }
 
-    private static void printGameTable(char[][] gameTable) {
+    private static void makeComputerMove(char[][] gameTable) {
     }
 
     private static void makeUserMove(char[][] gameTable) {
