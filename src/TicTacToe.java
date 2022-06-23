@@ -64,6 +64,15 @@ public class TicTacToe {
     }
 
     private static void makeComputerMove(char[][] gameTable) {
+        Random random = new Random();
+        int row;
+        int col;
+        do {
+            row = random.nextInt(3);
+            col = random.nextInt(3);
+        } while (gameTable[row][col] != ' ');
+
+        gameTable[row][col] = '0';
     }
 
     private static void makeUserMove(char[][] gameTable) {
