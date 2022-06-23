@@ -76,6 +76,20 @@ public class TicTacToe {
     }
 
     private static void makeUserMove(char[][] gameTable) {
+        while(true) {
+            System.out.println("Please type number between 1 and 9:");
+            String string = (new Scanner(System.in)).nextLine();
+            if (string.length() == 1) {
+                char digit = string.charAt(0);
+                if (digit >= '1' && digit <= '9' && makeUserMoveToCell(gameTable, digit)) {
+                    return;
+                }
+            }
+        }
+    }
+
+    private static boolean makeUserMoveToCell(char[][] gameTable, char digit) {
+        return false;
     }
 
     private static boolean userWin(char[][] gameTable) {
